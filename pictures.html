@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Aerial 1.0 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+    <title>Go Green Or Go Home</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="css/innerpage.css" />
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Raleway:300|Inconsolata' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body >
+<div id="bg">
+    <div id="left-column">
+        <div id="menuBar" style="background-color:#6B9C60;height:900px;width:200px;float:left; top: 0;">
+            <ul>
+                <a href="home.html" class="button">Home</a>
+                <div class="divider"/>
+                <a href="funFacts.html" class="button">Fun Facts</a>
+                <div class="divider"/>
+                <a href="game.html" class="button">Game!</a>
+                <div class="divider"/>
+                <a href="pictures.html" class="button">About & Photos</a>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<span class="aboutblock">
+<div class="q-and-a">
+    <li><a id="homepage-title">About The Project</a>
+        <div class="hi" id="aboutdetails">Hello students of EWRT1B! Thank you so much for visiting my page.<br>
+                Initially, I was planning to use templates online/web design websites because they behaved more like a "drag and drop", <br> therefore making the process easier and more time-efficient.<br>
+                However, I wanted to challenge and push myself out of my comfort zone, so I decided to create this website from scratch using HTML, Javascript, JQuery, and CSS.<br>
+                I also used Google Forms API and Google Charts API for the data visualization.</p>
+            <p>I had very minimal exposure to web design and HTML/JS/CSS before taking up this project, but I was able to self-teach myself, thanks to Google. <br>
+                With that in mind, I would love to hear all your thoughts/suggestions! <br> For all those CS Majors out there, please don't be too critical :)</p>
+        <p id="smaller"> Time spent on website (researching & coding): 37.5 hours</p></div>
+    </li>
+    <li><a id="homepage-title">About The Pictures</a>
+
+        <div class="hi" id="photodetails">In addition to creating this web page, I shared my ideas with my peers and other personnel.<br>
+        I requested a section at the small convention at where I intern and had the opportunity to showcase a poster about my goals and the website.</div>
+    </li>
+</ul>
+</span>
+<script>
+    $(".hi").hide()
+    $(function(){
+
+        $('.q-and-a li a').each(function(){
+            $(this).click(function(){
+                $(this).siblings('.hi').slideToggle(300);
+            });
+        });
+
+    });
+</script>
+<div id="slideshow">
+    <div>
+        <img src="pic1.jpg" width="244.8" height="326.4">
+    </div>
+    <div>
+        <img src="pic2.jpg" width="326.4" height="244.8">
+    </div>
+    <div>
+        <img src="pic3.jpg" width="326.4" height="244.8">
+    </div>
+    <div>
+        <img src="pic4.jpg" width="326.4" height="244.8">
+    </div>
+    <div>
+        <img src="pic5.jpg" width="244.8" height="326.4">
+    </div>
+</div>
+<script>
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+        $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .delay(1000)
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+    },  3000);
+</script>
+<!--<div id="pictures">-->
+<!--<img src="pic1.jpg"  width="244.8" height="326.4"> <br>-->
+<!--<img src="pic2.jpg" width="326.4" height="244.8"> <br>-->
+<!--<img src="pic3.jpg" width="326.4" height="244.8"> <br>-->
+<!--<img src="pic4.jpg"  width="326.4" height="244.8"> <br>-->
+<!--<img src="pic5.jpg"  width="244.8" height="326.4"> <br>-->
+<!--</div>-->
+</body>
